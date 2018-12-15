@@ -54,7 +54,7 @@
         <input type="text" v-model="second">
     </div>
         <script type="text/javascript">
-        new Vue({
+        new Vue({            
             el: '#main',
             data: {
                 first:'',
@@ -89,6 +89,7 @@
         });
     </script>
  * v-on可以用@代替``<button @click="show">显隐</button>``
+ * methods的方法中this指代的是data
  * 1.0中无参事件方法可以定义默认参数event  ``show:function(event){``
  * 1.0中有参事件方法可以无法定义event，可以在方法体中使用$event
  * 2.0中event无需定义直接使用，没有了$event
