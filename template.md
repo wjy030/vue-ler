@@ -23,7 +23,7 @@
             box-shadow: 0 0 15px black;
         }
     </style>
-### 字符串  
+### 属性  
      data:{
        myStyle:'myDiv'
      }
@@ -40,6 +40,8 @@
                 myShadow: true
             }
         }
+### 字符串
+``<div :class="'myDiv'"></div>`` 或 ``<div :class='"myShadow"'></div>`` 直接以字符串填入class名，不用data中的内容
 ## style        
      data:{
             myStyle:{
