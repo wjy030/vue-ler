@@ -1,3 +1,4 @@
+
 # vue的模板，属性 style 及 class
 ## 模板
      <span v-once v-html>{{msg}}</span> //2.0版本 <span v-html="msg"></span>
@@ -12,4 +13,35 @@
 在属性中绑定data中变量  
 * 用   v-bind:属性名=“变量名”
 * 简化版  :属性名="变量名"
-## style / css
+## class操作
+     <style type="text/css">
+        .myDiv{
+            width: 100px;
+            height: 100px;
+            background: red;}
+        .myShadow{
+            box-shadow: 0 0 15px black;
+        }
+    </style>
+### 字符串  
+     data:{
+       myStyle:'myDiv'
+     }
+在data中定义变量，值为class名  
+``<div :class="myStyle"></div>`` 像操作属性一样用class  
+### 数组
+        data:{
+            myStyle:['myDiv','myShadow']
+        }
+### object
+     data:{
+            myStyle:{
+                myDiv: true,
+                myShadow: true
+            }
+        }
+## style        
+        
+        
+        
+        
