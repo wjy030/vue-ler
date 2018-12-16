@@ -41,7 +41,20 @@
             }
         }
 ## style        
-        
-        
+     data:{
+            myStyle:{
+                width: '200px',
+                height: '200px',
+                background: 'red',
+                transition: '.5s'
+            },
+            myBlack:{
+                background:'black'
+            }
+        }
+ 在data中定义style,为object方式
+ ``<div :style="myStyle"></div>`` 在元素中使用  
+ ``<div :style="[myStyle,myBlack]"></div>`` 使用多个style object  
+ 
         
         
