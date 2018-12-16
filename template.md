@@ -41,7 +41,7 @@
             }
         }
 ### 字符串
-``<div :class="'myDiv'"></div>`` 或 ``<div :class='"myShadow"'></div>`` 直接以字符串填入class名，不用data中的内容
+``<div :class="'myDiv'"></div>`` 或 ``<div :class='"myDiv myShadow"'></div>`` 直接以字符串填入class名，不用data中的内容
 ## style        
      data:{
             myStyle:{
