@@ -1,0 +1,44 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: wjy
+  Date: 2018/12/16
+  Time: 8:32
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" type="text/javascript"></script>
+    <style type="text/css">
+        .myDiv{
+            width: 300px;
+            height: 100px;
+            background: blueviolet;}
+        input.active{
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<div id="main">
+    <input type="button" v-for="(val,index) in btnTx" :class='index==idx?"active":""' :value="val" @click="change(index)">
+    <div class="myDiv" v-for="(val,index) in divTx" v-show='index==idx?true:false'>{{val}}</div>
+</div>
+<script type="text/javascript">
+    new Vue({
+        el:"#main",
+        data:{
+            idx:0,
+            btnTx:['天','地','人'],
+            divTx:['床前明月光','疑是地上霜','举头望明月']
+        },
+        methods:{
+            change:function (newIdx) {
+                this.idx = newIdx;
+            }
+        }
+    })
+</script>
+</body>
+</html>
