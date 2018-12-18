@@ -50,4 +50,8 @@ public class VueController {
     public String show6() {
         return "vue6";
     }
+    @RequestMapping("show7")
+    public String show7() {
+        return "vue7";
+    }
 }
