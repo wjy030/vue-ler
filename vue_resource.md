@@ -93,3 +93,18 @@ headers|	Object|	响应头
 data|Object|后台返回数据
 ## interceptor拦截器
 ![拦截器](resourceinte.png)
+### 基本用法
+```
+Vue.http.interceptors.push((request, next) => {
+        // ...
+        // 请求发送前的处理逻辑
+        // ...
+    next((response) => {
+        // ...
+        // 请求发送后的处理逻辑
+        // ...
+        // 根据请求的状态，response参数会返回给successCallback或errorCallback
+        return response
+    })
+})
+```
