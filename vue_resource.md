@@ -91,3 +91,4 @@ status|	number|	响应的HTTP状态码
 statusText|	string|	响应的状态文本
 headers|	Object|	响应头
 data|Object|后台返回数据
+## interceptor拦截器
