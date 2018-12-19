@@ -4,3 +4,4 @@
 ## [实现tab功能](tab.md)
 ## [实现登记板](test.md)
 ## [vue-resource插件实现ajax](vue_resource.md)
+## [vue 过滤器](filter.md)
