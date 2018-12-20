@@ -47,3 +47,25 @@ let a = new Vue({
 ### $set() 调用方式
 * a.$set(a.obj.age, 24) **1.0版本**
 * a.$set(a.obj,"age", 24) **2.0版本**
+## track-by 和 :key
+``<li v-for="i in arr" track-by="$index">{{i.name}}</li>``**1.0写法**
+``<li v-for="i in arr" :key="i.index">{{i.name}}</li>``**2.0写法**
+功能是一样的,都是设置一个id,帮助vue识别dom元素,提高渲染效率.  
+另外,1.0中v-for循环相同的内容只会显示一次.通过加入 track-by="$index" 能够显示全部.而2.0是能够全部显示的.  
+track-by和:key的值在v-for循环中要具有唯一性
+## v-cloak
+### html代码
+```
+<div v-cloak>
+  {{ message }}
+</div>
+```
+### css代码
+```
+[v-cloak] {
+  display: none;
+}
+```
+### 功能
+被vue渲染的页面加载时有时会出现vue的变量名  
+用了以上代码后可以防止出现这种情况  
