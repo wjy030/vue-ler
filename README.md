@@ -6,3 +6,4 @@
 ## [vue-resource插件实现ajax](vue_resource.md)
 ## [vue 过滤器](filter.md)
 ## [vue 实例方法](vue_method.md)
+## [自定义指令](custom_order.md)
