@@ -43,7 +43,7 @@
         methods:{
             to:function () {
                 alert("*******");
-            }
+        }
         }
     })
     x.d = 4;
