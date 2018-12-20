@@ -1,4 +1,5 @@
 # vue自定义指令
+```
 <div class="container">
     <div v-leo="color"></div>
 </div>
@@ -17,6 +18,7 @@
         }
     })
 </script>
+```
 ## 指令定义 
 Vue.directive('自定义的名字',function(el,binding){})  
 名字中有大写字母时如doTh 则使用指令时要用 v-do-th
