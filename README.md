@@ -5,3 +5,4 @@
 ## [实现登记板](test.md)
 ## [vue-resource插件实现ajax](vue_resource.md)
 ## [vue 过滤器](filter.md)
+## [vue 实例方法](vue_method.md)
