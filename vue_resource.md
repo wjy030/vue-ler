@@ -5,7 +5,7 @@ vue使用vue-resource插件实现ajax完成前后台交互
 1. this.$http.get(url, [options])
 2. this.$http.head(url, [options])
 3. this.$http.delete(url, [options])
-4. this.$http.jsonp(url, [options])
+4. this.$http.jsonp(url, [options])  **[jsonp介绍](jsonp.md)**
 5. this.$http.post(url, [body], [options])
 6. this.$http.put(url, [body], [options])
 7. this.$http.patch(url, [body], [options])
