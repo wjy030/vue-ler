@@ -7,3 +7,4 @@
 ## [vue 过滤器](filter.md)
 ## [vue 实例方法](vue_method.md)
 ## [自定义指令](custom_order.md)
+## [vue生命周期](lifecycle.md)
