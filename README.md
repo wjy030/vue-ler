@@ -8,3 +8,5 @@
 ## [vue 实例方法](vue_method.md)
 ## [自定义指令](custom_order.md)
 ## [vue生命周期](lifecycle.md)
+## [vue动画](animation.md)
+## [动态tab实现](tab2.md)
