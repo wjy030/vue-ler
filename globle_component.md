@@ -34,5 +34,5 @@
         template:'<h1>你好!{{msg}}</h1>'
     }
 ```
-temlate: 字符串,属性模板
+temlate: 模板,可以是字符串,也可以是模板引擎id #aaa
 data: 与new Vue 中的data不同,是个函数,返回值中的属性可以在template中使用
