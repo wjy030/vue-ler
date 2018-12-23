@@ -66,4 +66,12 @@ public class VueController {
     public String show10() {
         return "vue10";
     }
+    @RequestMapping("show11")
+    public String show11() {
+        return "vue11";
+    }
+    @RequestMapping("show12")
+    public String show12() {
+        return "vue12";
+    }
 }
