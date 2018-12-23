@@ -74,8 +74,17 @@ components: {
         }
 ```
 定义了组件后,可以用以下方式使用:  
-``<component is='mike'></component>`` 
-
-
+``<component is='mike'></component>`` 不使用vue属性绑定,属性值为组件名  
+``<component :is='"mike"'></component>`` 使用vue属性绑定,值为字符串  
+``<component :is='comp'></component>`` 使用vue属性绑定,值为data中的变量,此时可以通过方法改变方法名来动态改变模板
+### 动态改变模板
+``<input type="button" value="我变" @click="change"/>``  
+```
+methods: {
+change: function() {
+  this.comp = 'mike'
+}
+}
+```
 
 
