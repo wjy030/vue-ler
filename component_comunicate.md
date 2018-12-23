@@ -56,11 +56,12 @@
 父组件中data有变量fatMsg,在子组件中引用为fp  
 ```
  leo: {
-              props:['fp'],
-              methods:{
-                show2() {
-                    alert(this.fp);
-                }
-              },
+      props:['fp'],
+      methods:{
+        show2() {
+            alert(this.fp);
+        }
+      },
 ```
-
+``props:['fp'],`` 要在组件中使用fp引用,就要在组件的props中以数组形式定义  
+``<h1>千变万化!{{fp}}</h1>``然后就可以在模板中正常使用了
