@@ -10,3 +10,5 @@
 ## [vue生命周期](lifecycle.md)
 ## [vue动画](animation.md)
 ## [动态tab实现](tab2.md)
+## vue组件
+### [全局组件](globle_component.md)
