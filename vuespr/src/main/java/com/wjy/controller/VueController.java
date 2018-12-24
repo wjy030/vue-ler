@@ -74,4 +74,8 @@ public class VueController {
     public String show12() {
         return "vue12";
     }
+    @RequestMapping("show20")
+    public String show20() {
+        return "vue20";
+    }
 }
