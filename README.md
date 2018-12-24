@@ -12,3 +12,6 @@
 ## [动态tab实现](tab2.md)
 ## vue组件
 ### [全局组件](globle_component.md)
+### [局部组件](local_component.md)
+### [组件中的模板](component_template.md)
+### [组件间交互](component_communicate.md)
