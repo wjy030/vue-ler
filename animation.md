@@ -87,27 +87,6 @@ Vue.transition('bounce', {
   leaveClass: 'bounceOutRight'
 })
 ```
-也可以内部注册
-```
-new Vue({
-    el:'.container',
-    data:{
-        show:true,
-        msg:'hello world'
-    },
-    methods:{
-        changed: function () {
-            this.show = !this.show;
-        }
-    },
-    transition: {
-        bounce: {
-            enterClass: 'bounceInLeft',
-            leaveClass: 'bounceOutRight'
-        }
-    }
-})
-```
 ## 2.0版本改动
 ### 定义动画名
 ```
