@@ -15,3 +15,4 @@
 ### [局部组件](local_component.md)
 ### [组件中的模板](component_template.md)
 ### [组件间交互](component_comunicate.md)
+### [slot](slot.md)
