@@ -10,11 +10,12 @@
 ## [vue生命周期](lifecycle.md)
 ## [vue动画](animation.md)
 ## [动态tab实现](tab2.md)
+## [1.0 动画效果样例](component_1.0.md)
+## [2.0 动画效果样例](component_2.0.md)
 ## vue组件
 ### [全局组件](globle_component.md)
 ### [局部组件](local_component.md)
 ### [组件中的模板](component_template.md)
 ### [组件间交互](component_comunicate.md)
 ### [slot](slot.md)
-### [1.0 动画效果样例](component_1.0.md)
-### [2.0 动画效果样例](component_2.0.md)
+
