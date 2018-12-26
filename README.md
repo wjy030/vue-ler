@@ -16,4 +16,4 @@
 ### [组件中的模板](component_template.md)
 ### [组件间交互](component_comunicate.md)
 ### [slot](slot.md)
-### [1.0 组件效果样例]
+### [1.0 组件效果样例](component_1.0.md)
