@@ -261,3 +261,4 @@ subRoutes: {
 </script>
 </body>
 ```
+``<h2>{{$route | show}}</h2>``每次跳转时$route变量变更,过滤器show会被调用,此时show就相当于onload事件方法
