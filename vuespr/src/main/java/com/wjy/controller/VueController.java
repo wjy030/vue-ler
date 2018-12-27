@@ -90,4 +90,20 @@ public class VueController {
     public String show21() {
         return "vue21";
     }
+    @RequestMapping("show22")
+    public String show22() {
+        return "vue22";
+    }
+    @RequestMapping("show23")
+    public String show23() {
+        return "vue23";
+    }
+    @RequestMapping("show24")
+    public String show24() {
+        return "vue24";
+    }
+    @RequestMapping("show25")
+    public String show25() {
+        return "vue25";
+    }
 }

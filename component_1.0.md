@@ -1,12 +1,5 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: suneee
-  Date: 2018/12/26
-  Time: 10:08
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+# 1.0版本动画效果样例
+```
 <head>
     <title>Title</title>
     <script src="../static/js/vue1.js" type="text/javascript"></script>
@@ -40,4 +33,4 @@ new Vue({
 })
 </script>
 </body>
-</html>
+```
