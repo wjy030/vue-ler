@@ -79,3 +79,110 @@ router.redirect({
     });
 ```
 对'/'根路径重定向,实现默认页面的指定
+# 路由嵌套
+```
+<body>
+<a v-link="{path:'/in'}">内功</a>
+<a v-link="{path:'/sword'}">剑法</a>
+<router-view></router-view>
+<template id="in">
+    <h1>小无相功</h1>
+    <h1>九阳神功</h1>
+</template>
+<template id="sword">
+    <h1><a v-link="{path:'/sword/pixie'}">辟邪剑谱</a></h1>
+    <h1><a v-link="{path:'/sword/dugu'}">独孤九剑</a></h1>
+    <router-view></router-view>
+</template>
+<template id="pixie">
+    <h2>欲练此功,必先自宫</h2>
+</template>
+<template id="dugu">
+    <h2>一剑破万法</h2>
+</template>
+<script type="text/javascript">
+    let nei =  Vue.extend({
+        template:'#in'
+    });
+    let sword = Vue.extend({
+        template:'#sword'
+    })
+    let router = new VueRouter();
+    router.map({
+        in:{
+            component:nei
+        },
+        sword:{
+            component:sword,
+            subRoutes: {
+                'pixie':{
+                    component:{
+                        template:'#pixie'
+                    }
+                },
+                'dugu':{
+                    component: {
+                        template:'#dugu'
+                    }
+                }
+            }
+        }
+    })
+    let app = Vue.extend();
+    router.start(app,'body');
+    router.redirect({
+        '/':'in'
+    });
+</script>
+</body>
+```
+## 子路由映射
+```
+sword:{
+    component:sword,
+    subRoutes: {
+        'pixie':{
+            component:{
+                template:'#pixie'
+            }
+        },
+        'dugu':{
+            component: {
+                template:'#dugu'
+            }
+        }
+    }
+}
+```
+在映射中使用subRoutes定义子路由映射
+## 实现跳转
+``<a v-link="{path:'/sword/dugu'}">独孤九剑</a>``v-link中指定路径
+```
+<template id="sword">
+    <h1><a v-link="{path:'/sword/pixie'}">辟邪剑谱</a></h1>
+    <h1><a v-link="{path:'/sword/dugu'}">独孤九剑</a></h1>
+    <router-view></router-view>
+</template>
+```
+在要渲染的位置使用``<router-view></router-view>``
+# 子路由参数传递
+``<a v-link="{path:'/sword/content/002?disc=一剑破万法'}">独孤九剑</a>``可以在path中传参数值002,get参数中传参数disc
+## path参数解析
+```
+subRoutes: {
+    'content/:id':{
+        component:{
+            template:'#content'
+        }
+    }
+}
+```
+通过**:参数名**将path中的参数值接收到指定参数中
+## $route变量
+```
+<template id="content">
+    <h2>{{$route.params.id}}</h2>
+    <h2>{{$route.query.disc}}</h2>
+</template>
+```
+子组件中可以使用$route变量,path中的参数会被放入$route.params中,get参数会被放入$route.query中
