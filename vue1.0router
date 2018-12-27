@@ -52,7 +52,7 @@ let router = new VueRouter();
 3. 路由映射
 ```
 router.map({
-    myli:{  //myli就是指向li的地址
+    myli:{  //myli就是指向li的地址,还可以写成'myli','/myli'
         component:li
     },
     mymo:{  //mymo就是指向mo的地址
