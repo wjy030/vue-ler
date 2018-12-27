@@ -10,6 +10,7 @@
 <head>
     <title>Title</title>
     <script src="../static/js/vue1.js" type="text/javascript"></script>
+    <script src="../static/js/vue-resource-1.5.1.js" type="text/javascript"></script>
     <script src="../static/js/vue-router0713.js" type="text/javascript"></script>
 </head>
 <body>
@@ -26,8 +27,13 @@
     <router-view></router-view>
 </template>
 <template id="content">
-    <h2>{{$route.params.id}}</h2>
-    <h2>{{$route.query.disc}}</h2>
+    <div>
+    <div id="cat">
+    <h2>{{$route | show}}</h2>
+    <h2>{{disc}}</h2>
+    </div>
+    </div>
+
 </template>
 <script type="text/javascript">
     let nei =  Vue.extend({
@@ -46,7 +52,21 @@
             subRoutes: {
                 'content/:id':{
                     component:{
-                        template:'#content'
+                        template:'#content',
+                        data() {
+                            return {
+                                id:'',
+                                disc:''
+                            }
+                        },
+                        filters: {
+                            show: function (val) {
+                                //此处可以
+                                this.id = val.params.id;
+                                this.disc = val.query.disc;
+                                return this.id;
+                            }
+                        }
                     }
                 }
             }
