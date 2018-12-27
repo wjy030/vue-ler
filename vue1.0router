@@ -1,0 +1,81 @@
+# vue1.0 路由
+1.0使用的vue_router版本为0.7.13
+```
+<body>
+<a v-link="{path:'/myli'}">李</a>
+<a v-link="{path:'/mymo'}">魔</a>
+<router-view></router-view>
+<template id="li">
+    <h1>我是李</h1>
+</template>
+<template id="mo">
+    <h1>我是魔</h1>
+</template>
+<script type="text/javascript">
+    let li =  Vue.extend({
+        template:'#li'
+    });
+    let mo = Vue.extend({
+        template:'#mo'
+    })
+    let router = new VueRouter();
+    router.map({
+        myli:{
+            component:li
+        },
+        mymo:{
+            component:mo
+        }
+    })
+    let app = Vue.extend();
+    router.start(app,'body');
+    router.redirect({
+        '/':'mymo'
+    });
+</script>
+</body>
+```
+## 使用步骤
+1. 创建组件
+```
+let li =  Vue.extend({
+    template:'#li'
+});
+let mo = Vue.extend({
+    template:'#mo'
+})
+```
+2. 创建路由
+```
+let router = new VueRouter();
+```
+3. 路由映射
+```
+router.map({
+    myli:{  //myli就是指向li的地址
+        component:li
+    },
+    mymo:{  //mymo就是指向mo的地址
+        component:mo
+    }
+})
+```
+调用router的map方法映射路由，每条路由以key-value的形式存在，key是路径，value是组件。
+例如：'/home'是一条路由的key，它表示路径；{component: Home}则表示该条路由映射的组件。
+4. 路由启动
+```
+let app = Vue.extend();
+    router.start(app,'body');
+```
+路由器的运行需要一个根组件，比如router.start(App, '#app') 表示router会创建一个App实例，并且挂载到#app元素。
+注意：使用vue-router的应用，不需要显式地创建Vue实例，而是调用start方法将根组件挂载到某个元素。
+## 实现跳转
+``<a v-link="{path:'/myli'}">李</a>`` v-link指令指定跳转的路径  
+``<router-view></router-view>``在这个位置渲染匹配的组件
+# 实现重定向
+```
+router.redirect({
+        '/':'mymo'
+    });
+```
+对'/'根路径重定向,实现默认页面的指定
