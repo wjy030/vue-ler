@@ -1,11 +1,13 @@
 <template>
     <div id="app">
-        <tab :tabs="tabNode"></tab>
+        <!--<tab :tabs="tabNode"></tab>-->
+        <slider-tab :tabs="tabNode"></slider-tab>
     </div>
 </template>
 
 <script>
     import tab from './tab.vue'
+    import sliderTab from './sliderTab.vue'
     export default {
         data() {
             return {
@@ -15,7 +17,7 @@
             }
         },
         components: {
-            tab
+            tab,sliderTab
         }
     }
 </script>
