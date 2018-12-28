@@ -20,3 +20,4 @@
 ### [slot](slot.md)
 ## [vue 1.0路由](vue1.0router.md)
 ## [vue-cli](vuecli.md)
+### [vue 1.0 脚手架 webpack-simple实战:tab页](vue-1.0-webpack-simple.md)
