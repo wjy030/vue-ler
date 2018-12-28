@@ -18,4 +18,5 @@
 ### [组件中的模板](component_template.md)
 ### [组件间交互](component_comunicate.md)
 ### [slot](slot.md)
-
+### [vue 1.0路由](vue1.0router.md)
+### [vue-cli](vuecli.md)
