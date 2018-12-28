@@ -1,26 +1,27 @@
 <template>
-  <div id="app">
-    <h1>{{ msg }}</h1>
-  </div>
+    <div id="app">
+        <tab :tabs="tabNode"></tab>
+    </div>
 </template>
 
 <script>
-export default {
-  data () {
-      debugger;
-    return {
-      // note: changing this line won't causes changes
-      // with hot-reload because the reloaded component
-      // preserves its current state and we are modifying
-      // its initial state.
-      msg: 'Hello Vue!'
+    import tab from './tab.vue'
+    export default {
+        data() {
+            return {
+                tabNode: {
+                    arr: ['./img/1.jpg','./img/2.jpeg','./img/3.jpg','./img/4.jpg','./img/5.jpg','./img/6.jpeg','./img/7.jpeg']
+                }
+            }
+        },
+        components: {
+            tab
+        }
     }
-  }
-}
 </script>
 
 <style>
-body {
-  font-family: Helvetica, sans-serif;
-}
+    body {
+        font-family: Helvetica, sans-serif;
+    }
 </style>
