@@ -22,3 +22,5 @@
 ## [vue-cli](vuecli.md)
 ### [vue 1.0 脚手架 webpack-simple实战:tab页](vue-1.0-webpack-simple.md)
 ### [vue 1.0 脚手架 webpack-simple实战:slidertab页](vue-1.0-webpack-simple-slidertab.md)
+## [vue 2.0区别概论](2.0diff.md)
+### [2.0组件交互部分](2.0componnet_diff.md)
