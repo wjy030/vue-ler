@@ -9,40 +9,92 @@
 <html>
 <head>
     <title>Title</title>
-    <script src="../static/js/vue1.js" type="text/javascript"></script>
+    <script src="../static/js/vue.js" type="text/javascript"></script>
 </head>
 <body>
     <div class="container">
-        <h1>{{msg}}</h1>
-        <child :c-msg.sync="msg"></child>
-        <template id="my">
+        <first></first>
+        <second></second>
+        <third></third>
+    </div>
+    <template id="aaa">
+        <div>
             <input type="button" value="改变" @click="change">
             <h2>{{myMsg}}</h2>
-        </template>
-    </div>
+        </div>
+    </template>
+    <template id="bbb">
+        <div>
+            <input type="button" value="改变" @click="change">
+            <h2>{{myMsg}}</h2>
+        </div>
+    </template>
+    <template id="ccc">
+        <div>
+            <input type="button" value="改变" @click="change">
+            <h2>{{myMsg}}</h2>
+        </div>
+    </template>
     <script type="text/javascript">
+        let vm = new Vue();
         new Vue({
             el: ".container",
-            data: {
-                msg:'我是父组件'
-            },
             components: {
-                child: {
-                    template:"#my",
-                    props:['cMsg'],
+                first: {
+                    template:"#aaa",
                     data() {
-                        return {
-                            myMsg:''
+                        return{
+                            heart:'我是aaa',
+                            myMsg:'我是aaa'
                         }
                     },
                     methods: {
                         change() {
-                            this.cMsg = '我是子组件';
-                            this.myMsg = this.cMsg;
+                            vm.$emit('common-msg',this.heart)
                         }
                     },
-                    ready() {
-                        this.myMsg = this.cMsg;
+                    mounted() {
+                        vm.$on('common-msg',(data) => {
+                            this.myMsg = data;
+                        })
+                    }
+                },
+                second: {
+                    template:"#bbb",
+                    data() {
+                        return{
+                            heart:'我是bbb',
+                            myMsg:'我是bbb'
+                        }
+                    },
+                    methods: {
+                        change() {
+                            vm.$emit('common-msg',this.heart)
+                        }
+                    },
+                    mounted() {
+                        vm.$on('common-msg',(data) => {
+                            this.myMsg = data;
+                        })
+                    }
+                },
+                third: {
+                    template:"#ccc",
+                    data() {
+                        return{
+                            heart:'我是ccc',
+                            myMsg:'我是ccc'
+                        }
+                    },
+                    methods: {
+                        change() {
+                            vm.$emit('common-msg',this.heart)
+                        }
+                    },
+                    mounted() {
+                        vm.$on('common-msg',(data) => {
+                            this.myMsg = data;
+                        })
                     }
                 }
             }
