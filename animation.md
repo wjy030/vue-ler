@@ -94,6 +94,14 @@ Vue.transition('bounce', {
     <p v-if="show">hello</p>
   </transition>
 ```
+transition只能包一个元素,要包多个元素时用transition-group
+```
+<transition-group name="fade">
+    <p v-if="show" :key='1'>hello</p>
+    <p v-if="show" :key='2'>1111</p>
+  </transition-group>
+```
+**如果包了两个相同的元素时,要定义:key**  
 name有默认值v
 ### 定义动画style
 1. fade-enter：定义进入过渡的开始状态。在元素被插入之前生效，在元素被插入之后的下一帧移除。
