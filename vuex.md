@@ -36,3 +36,31 @@ export default new vuex.Store({
 })
 ```
 导出该管理器
+## 在vue中注册vuex
+```
+import Vue from 'vue'
+import vuex from 'vuex'
+import App from './App.vue'
+import store from './store'  //管理器写在stroe.js中
+Vue.use(vuex); //使用vuex可以使用
+new Vue({
+  store,   // 启用定义的管理器
+  el: '#app',
+  render: h => h(App)
+})
+```
+## 在模块中使用管理器中定义的状态和方法
+```
+import {mapGetters,mapActions} from 'vuex'
+    export default {
+        name: "test",
+        computed: mapGetters(['count']),
+        methods: mapActions(['testAdd'])
+    }
+```
+mapGetters 管理器中的getter方法
+mapActions 管理器中的actions方法
+mapGetters(['count']) 只引入指定的状态和方法来使用
+
+
+
