@@ -10,8 +10,11 @@
  */
 package com.wjy.controller;
 
+import com.wjy.model.JsonReturn;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * 〈一句话功能简述〉<br> 
@@ -121,5 +124,18 @@ public class VueController {
     @RequestMapping("show29")
     public String show29() {
         return "vue29";
+    }
+    @RequestMapping("show30")
+    public String show30() {
+        return "vue30";
+    }
+    @RequestMapping("getSkill/{sid}")
+    @ResponseBody
+    public JsonReturn show29(@PathVariable("sid") String sid)
+    {
+        System.out.println(sid);
+        JsonReturn js = new JsonReturn();
+        js.setReturnMessage("扔出一把锤子，对击中的第一个敌人造成110点伤害，并使其昏迷1.25秒。");
+        return js;
     }
 }
