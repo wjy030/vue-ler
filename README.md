@@ -25,3 +25,4 @@
 ## [vue 2.0区别概论](2.0diff.md)
 ### [2.0组件交互部分](2.0componnet_diff.md)
 ### [2.0路由](2.0router.md)
+## [vuex](vuex.md)
